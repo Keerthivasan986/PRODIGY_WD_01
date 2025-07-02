@@ -1,0 +1,267 @@
+/* Basic Resets & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background for general body (behind sections) */
+    color: #333; /* Default text color */
+}
+
+/* Header & Navigation Bar */
+header {
+    background-color: #333; /* Dark grey header */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Base style for all navigation links */
+.nav-links a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+.nav-links li {
+    margin: 0 5px;
+}
+
+/* Hover state for non-active links */
+.nav-links a:not(.active):hover {
+    color: #ffd700; /* Gold color on hover for non-active links */
+}
+
+/* Styles for the active navigation link */
+.nav-links a.active {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark grey text for active link to contrast with white background */
+}
+
+
+/* Sections Styling */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Hero Section (Home) */
+.hero {
+    background-color: #003366; /* Original dark blue */
+    color: #fff;
+    padding-top: 150px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.explore-button {
+    background-color: #FFD700; /* Gold color */
+    color: #000; /* Black text on button */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+}
+
+/* Services Section */
+.services-section {
+    background-color: #004080; /* Original dark blue */
+    color: #fff;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.services-section li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Styling for the emojis in the services section */
+.service-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* About Section */
+.about-section {
+    background-color: #002D62; /* Original dark blue */
+    color: #fff;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #003366; /* Original dark blue */
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-section a {
+    color: #FFD700; /* Gold for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #e6c200; /* Darker gold on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 5px 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 80px 15px;
+    }
+
+    .services-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .services-section li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links li {
+        margin: 5px 5px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .explore-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .services-section li {
+        font-size: 1rem;
+    }
+}
